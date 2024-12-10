@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS pessoa_fisica (
+CREATE TABLE IF NOT EXISTS 'pessoa_fisica' (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     renda_mensal REAL,
     idade INTEGER,
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS pessoa_fisica (
     saldo REAL
 );
 
-CREATE TABLE IF NOT EXISTS pessoa_juridica (
+CREATE TABLE IF NOT EXISTS 'pessoa_juridica' (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     faturamento REAL,
     idade INTEGER,
