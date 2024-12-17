@@ -14,15 +14,15 @@ A ideia desse desafio é criar uma API para um banco contendo operações para a
 
 Criação de um sistema bancário com clientes:
 
-- Pessoas Físicas
-- Pessoas Jurídicas
+- Pessoas Físicas OK
+- Pessoas Jurídicas OK
 
 ### Regras da aplicação
 
-- A aplicação deve estar conectada a um banco SQLite;
+- A aplicação deve estar conectada a um banco SQLite; OK
 - O projeto deve conter uma interface Cliente, com os métodos: Sacar dinheiro e Realizar extrato.
 - As controllers devem possuir testes unitários para garantir que estão funcionando conforme devem funcionar.
-- Deverá ser possível: Criar e listar usuários.
+- Deverá ser possível: Criar e listar usuários. LISTAR OK CRIAR - ! 
 
 ### Regras de negócio
 
