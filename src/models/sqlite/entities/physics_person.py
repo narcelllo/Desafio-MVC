@@ -15,7 +15,7 @@ class PhysicsPersonTable(Base):
 
     def __repr__(self):
         return (
-            f"PessoaFisicaTable [\n"
+            f"PhysicsPersonTable [\n"
             f"    id={self.id},\n"
             f"    nome_completo={self.nome_completo},\n"
             f"    idade={self.idade},\n"

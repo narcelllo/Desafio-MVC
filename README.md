@@ -30,6 +30,6 @@ Criação de um sistema bancário com clientes:
 
 ### Conceitos que pode praticar
 
-- MVC
-- Testes unitários (e quem sabe de integração 👀)
-- Criação e integração com banco de dados SQLite
+- MVC - OK
+- Testes unitários (e quem sabe de integração 👀) - OK
+- Criação e integração com banco de dados SQLite - OK

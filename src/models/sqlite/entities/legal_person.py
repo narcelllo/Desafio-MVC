@@ -15,7 +15,7 @@ class LegalPersonTable(Base):
 
     def __repr__(self):
         return (
-            f"PessoaFisicaTable [\n"
+            f"LegalPersonTable [\n"
             f"    id={self.id},\n"
             f"    nome_fantasia={self.nome_fantasia},\n"
             f"    idade={self.idade},\n"
@@ -26,3 +26,4 @@ class LegalPersonTable(Base):
             f"    categoria={self.categoria}\n"
             f"]"
         )
+    
