@@ -1,12 +1,12 @@
 from sqlalchemy.orm.exc import NoResultFound
 from src.models.sqlite.entities.legal_person import LegalPersonTable
-from src.models.sqlite.interfaces.legal_person import LegalPersonInterface
+from src.models.sqlite.interfaces.legal_person import LegalPersonRepositoryInterface
 
-class LegalPersonRepository(LegalPersonInterface):
+class LegalPersonRepository(LegalPersonRepositoryInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
-    def list_pessoa_fisica(self) -> list[LegalPersonTable]:
+    def list_legal_person(self) -> list[LegalPersonTable]:
         with self.__db_connection as database:
             try:
                 pessoa_fisica = database.session.query(LegalPersonTable).all()

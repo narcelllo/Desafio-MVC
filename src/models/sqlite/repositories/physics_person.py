@@ -1,8 +1,8 @@
 from sqlalchemy.orm.exc import NoResultFound
 from src.models.sqlite.entities.physics_person import PhysicsPersonTable
-from src.models.sqlite.interfaces.physics_person import PhysicsPersonInterface
+from src.models.sqlite.interfaces.physics_person import PhysicsPersonRepositoryInterface
 
-class PhysicsPersonRepository(PhysicsPersonInterface):
+class PhysicsPersonRepository(PhysicsPersonRepositoryInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 

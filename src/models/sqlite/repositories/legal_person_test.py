@@ -3,9 +3,8 @@ from .legal_person import LegalPersonRepository
 
 db_connection_handler.connect_to_db()
 
-def test_list_pessoa_fisica():
+def test_list_legal_person():
     repo = LegalPersonRepository(db_connection_handler)
-    response = repo.list_pessoa_fisica()
+    response = repo.list_legal_person()
     print()
     print(response)
-    

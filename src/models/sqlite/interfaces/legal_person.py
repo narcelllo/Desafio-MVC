@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from src.models.sqlite.entities.legal_person import LegalPersonTable
 
-class LegalPersonInterface(ABC):
+class LegalPersonRepositoryInterface(ABC):
     @abstractmethod
     def list_legal_person(self) -> list[LegalPersonTable]:
         pass
