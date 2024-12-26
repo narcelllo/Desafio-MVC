@@ -3,7 +3,7 @@ from src.models.sqlite.entities.legal_person import LegalPersonTable
 
 class LegalPersonInterface(ABC):
     @abstractmethod
-    def list_pessoa_fisica(self) -> list[LegalPersonTable]:
+    def list_legal_person(self) -> list[LegalPersonTable]:
         pass
 
     @abstractmethod
