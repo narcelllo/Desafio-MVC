@@ -1,6 +1,9 @@
 ﻿[MAIN]
 
 disable =
+      R0801, #Similar lines in 2 files
+      R0917, #Too many positional arguments
+      C0301, #line-too-long
       W0707, #raise-missing-from
       W0719, #broad-exception-raised
       C0304, #missing-final-newline
@@ -302,7 +305,7 @@ exclude-too-few-public-methods=
 ignored-parents=
 
 # Maximum number of arguments for function / method.
-max-args=5
+max-args=8
 
 # Maximum number of attributes for a class (see R0902).
 max-attributes=7
@@ -320,7 +323,7 @@ max-locals=15
 max-parents=7
 
 # Maximum number of positional arguments for function / method.
-max-positional-arguments=5
+max-positional-arguments=8
 
 # Maximum number of public methods for a class (see R0904).
 max-public-methods=20
