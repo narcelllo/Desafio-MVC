@@ -1,15 +1,16 @@
 from sqlalchemy.orm.exc import NoResultFound
 from src.models.sqlite.entities.physics_person import PhysicsPersonTable
+from src.models.sqlite.interfaces.physics_person import PhysicsPersonInterface
 
-class PhysicsPersonRepository():
+class PhysicsPersonRepository(PhysicsPersonInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
-    def list_pessoa_fisica(self) -> list[PhysicsPersonTable]:
+    def list_physics_person(self) -> list[PhysicsPersonTable]:
         with self.__db_connection as database:
             try:
-                pessoa_fisica = database.session.query(PhysicsPersonTable).all()
-                return pessoa_fisica
+                physics_person = database.session.query(PhysicsPersonTable).all()
+                return physics_person
             except NoResultFound:
                 return []
 

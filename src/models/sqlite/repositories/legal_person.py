@@ -1,7 +1,8 @@
 from sqlalchemy.orm.exc import NoResultFound
 from src.models.sqlite.entities.legal_person import LegalPersonTable
+from src.models.sqlite.interfaces.legal_person import LegalPersonInterface
 
-class LegalPersonRepository():
+class LegalPersonRepository(LegalPersonInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
