@@ -9,3 +9,7 @@ class PhysicsPersonRepositoryInterface(ABC):
     @abstractmethod
     def insert_physics_person(self, renda_mensal: float, idade: int, nome_completo: str, celular: str, email: str, categoria: str, saldo: float) -> PhysicsPersonTable:
         pass
+
+    @abstractmethod
+    def get_physics_person(self, physics_person_id: int) -> PhysicsPersonTable:
+        pass

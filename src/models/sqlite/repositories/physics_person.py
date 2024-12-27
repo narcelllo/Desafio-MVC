@@ -32,3 +32,26 @@ class PhysicsPersonRepository(PhysicsPersonRepositoryInterface):
             except Exception:
                 database.session.rollback()
                 raise Exception("db rollback")
+            
+    def get_physics_person(self, physics_person_id: int) -> PhysicsPersonTable:
+        with self.__db_connection as database:
+            try:
+                physics_person_data = (
+                    database.session
+                        .query(PhysicsPersonTable)
+                        .filter(PhysicsPersonTable.id == physics_person_id )
+                        .with_entities(
+                            PhysicsPersonTable.renda_mensal,
+                            PhysicsPersonTable.idade,
+                            PhysicsPersonTable.nome_completo,
+                            PhysicsPersonTable.celular,
+                            PhysicsPersonTable.email,
+                            PhysicsPersonTable.categoria,
+                            PhysicsPersonTable.saldo,
+                        )
+                        .one()
+                )
+                return physics_person_data
+
+            except NoResultFound:
+                return None

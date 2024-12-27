@@ -30,3 +30,14 @@ def test_insert_legal_person():
 
     repo = LegalPersonRepository(db_connection_handler)
     repo.insert_legal_person(faturamento, idade, nome_fantasia, celular, email_corporativo, categoria, saldo)
+
+@pytest.mark.skip(reason="Interação com o banco de dados test_get_legal_person")
+def test_get_legal_person():
+    legal_person_id = 1
+
+    repo = LegalPersonRepository(db_connection_handler)
+    response = repo.get_legal_person(legal_person_id)
+    print()
+    print(response)
+    print(response.nome_fantasia)
+    print(response.email_corporativo)

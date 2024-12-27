@@ -32,3 +32,26 @@ class LegalPersonRepository(LegalPersonRepositoryInterface):
             except Exception:
                 database.session.rollback()
                 raise Exception("db rollback")
+
+    def get_legal_person(self, legal_person_id: int) -> LegalPersonTable:
+        with self.__db_connection as database:
+            try:
+                legal_person_data = (
+                    database.session
+                        .query(LegalPersonTable)
+                        .filter(LegalPersonTable.id == legal_person_id )
+                        .with_entities(
+                            LegalPersonTable.faturamento,
+                            LegalPersonTable.idade,
+                            LegalPersonTable.nome_fantasia,
+                            LegalPersonTable.celular,
+                            LegalPersonTable.email_corporativo,
+                            LegalPersonTable.categoria,
+                            LegalPersonTable.saldo,
+                        )
+                        .one()
+                )
+                return legal_person_data
+
+            except NoResultFound:
+                return None
