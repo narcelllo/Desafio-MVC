@@ -1,8 +1,8 @@
 import re
-from src.models.sqlite.interfaces.physics_person import PhysicsPersonInterface
+from src.models.sqlite.interfaces.physics_person import PhysicsPersonRepositoryInterface
 
 class PhysicsPersonCreatorController:
-    def __init__(self, physics_person_repository: PhysicsPersonInterface) -> None:
+    def __init__(self, physics_person_repository: PhysicsPersonRepositoryInterface) -> None:
         self.__physics_person_repository = physics_person_repository
         
     def create(self, physics_person_info: dict) -> dict:
