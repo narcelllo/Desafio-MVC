@@ -1,7 +1,8 @@
 import re
 from src.models.sqlite.interfaces.legal_person import LegalPersonRepositoryInterface
+from .interfaces.legal_person_creator_controller import LegalPersonCreaterControllerInterface
 
-class LegalPersonCreaterController:
+class LegalPersonCreaterController(LegalPersonCreaterControllerInterface):
     def __init__(self, legal_person_repository: LegalPersonRepositoryInterface ) -> None:
         self.__legal_person_repository = legal_person_repository
 
